@@ -55,7 +55,7 @@ npm start
 
 ## 🔗 Submission Links
 
-* **Live Assessment (Replit):** [PASTE_YOUR_REPLIT_LINK_HERE]
+* **Live Assessment (Replit):** [[Live Link](https://smart-expense-api--kumaraaryash.replit.app)
 * **Source Code (GitHub):** [https://github.com/Aaryash08/Smart-Expense.git](https://github.com/Aaryash08/Smart-Expense.git)
 
 > *This project was developed as part of the Deloitte Graduate Hiring Assessment (2025).*
