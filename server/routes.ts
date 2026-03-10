@@ -122,8 +122,8 @@ export async function registerRoutes(
       const totalMonthlySpending = monthlyExpenses.reduce((sum, exp) => sum + exp.amount, 0);
 
       let warning;
-      if (totalMonthlySpending > 1000) {
-        warning = "Warning: You have exceeded your ₹1000 monthly budget!";
+      if (totalMonthlySpending > 15000) {
+        warning = "Warning: You have exceeded your ₹15000 monthly budget!";
       }
 
       res.status(201).json({ expense: newExpense, warning });

@@ -23,7 +23,7 @@ export default function Dashboard() {
   const { data: analytics } = useMonthlyAnalytics();
 
   const totalSpent = analytics?.reduce((acc, curr) => acc + curr.total, 0) || 0;
-  const isWarning = totalSpent > 1000;
+  const isWarning = totalSpent > 15000;
 
   return (
     <Layout>
@@ -53,7 +53,7 @@ export default function Dashboard() {
           <div>
             <h3 className="font-bold text-destructive">Budget Alert Exceeded</h3>
             <p className="text-sm text-destructive/80 mt-1">
-              You have spent ₹{totalSpent.toFixed(2)} this month, exceeding your ₹1,000.00 recommended limit. Consider reviewing your recent expenses.
+              You have spent ₹{totalSpent.toFixed(2)} this month, exceeding your ₹15,000.00 recommended limit. Consider reviewing your recent expenses.
             </p>
           </div>
         </motion.div>
@@ -74,12 +74,12 @@ export default function Dashboard() {
         <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex flex-col justify-center">
           <p className="font-medium text-muted-foreground mb-1">Budget Limit</p>
           <h2 className="text-3xl font-display font-bold text-foreground">
-            ₹1,000.00
+            ₹15,000.00
           </h2>
           <div className="mt-4 h-2 w-full bg-secondary rounded-full overflow-hidden">
             <div 
               className={`h-full rounded-full transition-all ${isWarning ? 'bg-destructive' : 'bg-primary'}`} 
-              style={{ width: `${Math.min((totalSpent / 1000) * 100, 100)}%` }} 
+              style={{ width: `${Math.min((totalSpent / 15000) * 100, 100)}%` }} 
             />
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function Dashboard() {
         <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex flex-col justify-center">
           <p className="font-medium text-muted-foreground mb-1">Remaining</p>
           <h2 className={`text-3xl font-display font-bold ${isWarning ? 'text-destructive' : 'text-emerald-500'}`}>
-            ₹{Math.max(1000 - totalSpent, 0).toFixed(2)}
+            ₹{Math.max(15000 - totalSpent, 0).toFixed(2)}
           </h2>
         </div>
       </div>
