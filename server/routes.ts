@@ -123,7 +123,7 @@ export async function registerRoutes(
 
       let warning;
       if (totalMonthlySpending > 1000) {
-        warning = "Warning: You have exceeded your $1000 monthly budget!";
+        warning = "Warning: You have exceeded your ₹1000 monthly budget!";
       }
 
       res.status(201).json({ expense: newExpense, warning });

@@ -58,7 +58,7 @@ export function AnalyticsChart() {
             ))}
           </Pie>
           <Tooltip 
-            formatter={(value: number) => [`$${value.toFixed(2)}`, 'Amount']}
+            formatter={(value: number) => [`₹${value.toFixed(2)}`, 'Amount']}
             contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
           />
           <Legend 

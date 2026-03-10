@@ -40,7 +40,7 @@ export default function Dashboard() {
         <AddExpenseModal />
       </div>
 
-      {/* Warning Banner (Triggered by Budget Alert constraint > $1000) */}
+      {/* Warning Banner (Triggered by Budget Alert constraint > ₹1000) */}
       {isWarning && (
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -53,7 +53,7 @@ export default function Dashboard() {
           <div>
             <h3 className="font-bold text-destructive">Budget Alert Exceeded</h3>
             <p className="text-sm text-destructive/80 mt-1">
-              You have spent ${totalSpent.toFixed(2)} this month, exceeding your $1,000.00 recommended limit. Consider reviewing your recent expenses.
+              You have spent ₹{totalSpent.toFixed(2)} this month, exceeding your ₹1,000.00 recommended limit. Consider reviewing your recent expenses.
             </p>
           </div>
         </motion.div>
@@ -67,14 +67,14 @@ export default function Dashboard() {
           </div>
           <p className="font-medium text-primary-foreground/80 mb-1">Total Spent (This Month)</p>
           <h2 className="text-4xl font-display font-bold tracking-tight">
-            ${totalSpent.toFixed(2)}
+            ₹{totalSpent.toFixed(2)}
           </h2>
         </div>
         
         <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex flex-col justify-center">
           <p className="font-medium text-muted-foreground mb-1">Budget Limit</p>
           <h2 className="text-3xl font-display font-bold text-foreground">
-            $1,000.00
+            ₹1,000.00
           </h2>
           <div className="mt-4 h-2 w-full bg-secondary rounded-full overflow-hidden">
             <div 
@@ -87,7 +87,7 @@ export default function Dashboard() {
         <div className="bg-card rounded-2xl p-6 shadow-sm border border-border/50 flex flex-col justify-center">
           <p className="font-medium text-muted-foreground mb-1">Remaining</p>
           <h2 className={`text-3xl font-display font-bold ${isWarning ? 'text-destructive' : 'text-emerald-500'}`}>
-            ${Math.max(1000 - totalSpent, 0).toFixed(2)}
+            ₹{Math.max(1000 - totalSpent, 0).toFixed(2)}
           </h2>
         </div>
       </div>
@@ -132,7 +132,7 @@ export default function Dashboard() {
                       </div>
                       <div className="text-right">
                         <p className="font-bold text-lg font-display text-foreground">
-                          ${expense.amount.toFixed(2)}
+                          ₹{expense.amount.toFixed(2)}
                         </p>
                       </div>
                     </li>
