@@ -3,7 +3,7 @@
 **Candidate:** Aaryash Kumar  
 **College:** KIIT  
 **Target Track:** Java & API Development  
-**Graduating:** 2025
+**Graduated:** 2025
 
 ---
 
